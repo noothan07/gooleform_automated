@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><title>Auto Fill Form</title></head>
+<body>
+  <button onclick="openForm()">Open Pre-filled Form</button>
+
+  <script>
+    function openForm() {
+      const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+      const name = "Nagala+Noothan";
+      const phone = "9391177132";
+      const email = "noothannagala7@gmail.com";
+      const intime = "10:00";
+      const outtime = "04:00";
+      const purpose = "Industrial Training";
+
+      const url = `https://docs.google.com/forms/d/e/1FAIpQLSd0mKD6AVZKHK1b260iryfJNAjAM0HER_FAjdY6L5Q5HYhTWQ/viewform?usp=pp_url` +
+        `&entry.628625980=${name}` +
+        `&entry.251918800=${phone}` +
+        `&entry.1831526576=${email}` +
+        `&entry.1726140343=${today}` +
+        `&entry.1944022955=${intime}` +
+        `&entry.502044810=${outtime}` +
+        `&entry.542241777=${purpose}`;
+
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
